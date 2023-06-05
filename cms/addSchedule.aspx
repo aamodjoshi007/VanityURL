@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="addSchedule.aspx.cs" Inherits="cms_addSchedule" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor" TagPrefix="cc1" %>
 
 <%@ Register TagName="header" Src="include/header.ascx" TagPrefix="ucheader" %>
@@ -93,6 +95,7 @@
                                                 <td class="auto-style1">&nbsp;</td>
                                                 <td class="auto-style3">
                                                     <asp:TextBox ID="txtEventDate" runat="server" Width="500"></asp:TextBox>
+                                                    <asp:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txtEventDate" Format="yyyy-MM-dd"></asp:CalendarExtender>
                                                     <br />
                                                     <asp:Label ID="lblEventDate" runat="server" Text="" ForeColor="Red"></asp:Label>
                                                 </td>
